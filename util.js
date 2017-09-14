@@ -20,7 +20,6 @@ var util={
                 return x.endsWith('.h') || x.endsWith('.cpp');
             });
             logger.debug("find files: %d",dirs.length);
-            let count=0;
             for(let file of dirs){
                 let data=fs.readFileSync(path.resolve(dir,file));
                 let buf = new Buffer(data, 'binary');
@@ -49,7 +48,6 @@ var util={
                         }
                         
                     }
-                    ++count;                    
                 }
             }
         }                                
